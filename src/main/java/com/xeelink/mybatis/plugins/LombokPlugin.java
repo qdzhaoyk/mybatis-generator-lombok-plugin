@@ -1,5 +1,4 @@
-package com.softwareloop.mybatis.generator.plugins;
-
+package com.xeelink.mybatis.plugins;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
@@ -10,14 +9,12 @@ import org.mybatis.generator.api.dom.java.TopLevelClass;
 
 import java.util.*;
 
-
 /**
- * A MyBatis Generator plugin to use Lombok's annotations.
- * For example, use @Data annotation instead of getter ands setter.
- *
- * @author Paolo Predonzani (http://softwareloop.com/)
+ * @author: zhaoyk
+ * @date: 2019-3-10 11:41
+ * @description:
  */
-public class LombokPlugin extends PluginAdapter {
+public class LombokPlugin  extends PluginAdapter {
 
     private final Collection<Annotations> annotations;
 

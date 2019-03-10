@@ -99,9 +99,9 @@ mybatis-generator-lombok-plugin as a dependency:
     </configuration>
     <dependencies>
         <dependency>
-            <groupId>com.softwareloop</groupId>
+            <groupId>com.xeelink</groupId>
             <artifactId>mybatis-generator-lombok-plugin</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
         </dependency>
     </dependencies>
 </plugin>
@@ -120,7 +120,7 @@ Then, in your MyBatis Generator configuration, include the plugin:
              targetRuntime="MyBatis3Simple"
              defaultModelType="flat">
         <!-- include the plugin -->
-        <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
+        <plugin type="com.xeelink.mybatis.plugins.LombokPlugin">
              
              <!-- enable annotations -->
              <property name="builder" value="true"/>

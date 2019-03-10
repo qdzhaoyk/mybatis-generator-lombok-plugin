@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.softwareloop</groupId>
+    <groupId>com.xeelink</groupId>
     <artifactId>mybatis-generator-lombok-plugin</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
 
-    <name>mybatis-generator-lombok-plugin</name>
+    <name>com.xeelink.mybatis-generator-lombok-plugin</name>
     <description>A plugin for MyBatis Generator to use Lombok annotations instead of getters and setters</description>
-    <url>https://github.com/softwareloop/mybatis-generator-lombok-plugin</url>
+    <url>https://github.com/qdzhaoyk/mybatis-generator-lombok-plugin</url>
 
     <licenses>
         <license>
@@ -28,13 +28,18 @@
 
     <developers>
         <developer>
-            <name>Paolo Predonzani</name>
-            <email>paolo.predonzani@gmail.com</email>
-            <url>https://github.com/softwareloop</url>
+            <name>Taylor Zhao</name>
+            <email>taylor.zhao.qingdao@gmail.com</email>
+            <url>https://github.com/qdzhaoyk</url>
         </developer>
     </developers>
 
     <contributors>
+        <contributor>
+            <name>Paolo Predonzani</name>
+            <email>paolo.predonzani@gmail.com</email>
+            <url>https://github.com/softwareloop</url>
+        </contributor>
         <contributor>
             <name>Artem Konovalov</name>
             <url>https://github.com/izebit</url>
@@ -53,8 +58,7 @@
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
-            <version>1.3.2</version>
-            <scope>provided</scope>
+            <version>1.3.7</version>
         </dependency>
     </dependencies>
 
