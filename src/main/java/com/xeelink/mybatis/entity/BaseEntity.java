@@ -1,21 +1,20 @@
 package com.xeelink.mybatis.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
 /**
  * @author: zhaoyk
  * @date: 2019-3-9 10:46
  */
-@data
+@Data
 public class BaseEntity {
 
     private Integer isdelete;
 
     private Date lastupdate;
 
-    public void setLastupdate(Date lastupdate) {
-        this.lastupdate = lastupdate;
-    }
 //    private Timestamp meteversion;
 
     public void preInsert() {
