@@ -1,4 +1,4 @@
-package com.xeelink.mybatis.entity;
+package com.xeelink.brandapi.entity;
 
 import lombok.Data;
 
