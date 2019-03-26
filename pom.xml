@@ -4,7 +4,7 @@
 
     <groupId>com.xeelink</groupId>
     <artifactId>mybatis-generator-lombok-plugin</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <name>com.xeelink.mybatis-generator-lombok-plugin</name>
     <description>A plugin for MyBatis Generator to use Lombok annotations instead of getters and setters</description>

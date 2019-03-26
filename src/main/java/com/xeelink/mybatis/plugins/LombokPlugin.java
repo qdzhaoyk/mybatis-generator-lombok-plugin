@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class LombokPlugin  extends PluginAdapter {
 
-    private final Collection<Annotations> annotations;
+    protected final Collection<Annotations> annotations;
 
     /**
      * LombokPlugin constructor
@@ -192,13 +192,14 @@ public class LombokPlugin  extends PluginAdapter {
         return true;
     }
 
-    private enum Annotations {
+    protected enum Annotations {
         DATA("data", "@Data", "lombok.Data"),
         BUILDER("builder", "@Builder", "lombok.Builder"),
         ALL_ARGS_CONSTRUCTOR("allArgsConstructor", "@AllArgsConstructor", "lombok.AllArgsConstructor"),
         NO_ARGS_CONSTRUCTOR("noArgsConstructor", "@NoArgsConstructor", "lombok.NoArgsConstructor"),
         ACCESSORS("accessors", "@Accessors", "lombok.experimental.Accessors"),
-        TO_STRING("toString", "@ToString", "lombok.ToString");
+        TO_STRING("toString", "@ToString", "lombok.ToString"),
+        EqualsAndHashCode("equalsAndHashCode", "@EqualsAndHashCode(callSuper = true)", "lombok.EqualsAndHashCode");
 
 
         private final String paramName;
@@ -214,7 +215,7 @@ public class LombokPlugin  extends PluginAdapter {
             this.options = new ArrayList<String>();
         }
 
-        private static Annotations getValueOf(String paramName) {
+        protected static Annotations getValueOf(String paramName) {
             for (Annotations annotation : Annotations.values())
                 if (String.CASE_INSENSITIVE_ORDER.compare(paramName, annotation.paramName) == 0)
                     return annotation;
@@ -222,7 +223,7 @@ public class LombokPlugin  extends PluginAdapter {
             return null;
         }
 
-        private static Collection<Annotations> getDependencies(Annotations annotation) {
+        protected static Collection<Annotations> getDependencies(Annotations annotation) {
             if (annotation == ALL_ARGS_CONSTRUCTOR)
                 return Collections.singleton(NO_ARGS_CONSTRUCTOR);
             else
@@ -238,7 +239,7 @@ public class LombokPlugin  extends PluginAdapter {
             return value.replaceAll("[\\w]+", "\"$0\"");
         }
 
-        private void appendOptions(String key, String value) {
+        protected void appendOptions(String key, String value) {
             String keyPart = key.substring(key.indexOf(".") + 1);
             String valuePart = value.contains(",") ? String.format("{%s}", value) : value;
             this.options.add(String.format("%s=%s", keyPart, quote(valuePart)));
